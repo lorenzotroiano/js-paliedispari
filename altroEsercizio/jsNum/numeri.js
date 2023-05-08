@@ -17,10 +17,10 @@ console.log(numRandom);
 const sommaNum = numRichiesto + numRandom;
 console.log(sommaNum);
 
-if (sommaNum % 2 === 0 && sceltaParODisp === "pari") {
-    console.log("Il numero è pari, complimenti User, hai vinto!");
-} else if (sommaNum % 2 !== 0 && sceltaParODisp === "dispari") {
-    console.log("Il numero è dispari, complimenti User, hai vinto!");
+if (sommaNum % 2 === 0 && sceltaParODisp === "pari" || sommaNum % 2 !== 0 && sceltaParODisp === "dispari") {
+    console.log("Complimenti User, hai vinto!");
+} else if (sceltaParODisp !== "pari" && sceltaParODisp !== "dispari") {
+    console.log("Il gioco non può funzionare, inserisci correttamente pari o dispari!");
 } else {
-    console.log("Mi dispiace User, hai perso!");
+    console.log("Ha vinto il computer, mi spiace User, ritenta!");
 }
