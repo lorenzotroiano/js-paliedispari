@@ -7,6 +7,8 @@ let sceltaParODisp = prompt("Scegli pari o dispari!");
 console.log(sceltaParODisp);
 
 
+
+
 // Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
 // let numRandom = Math.floor(Math.random() * 5) + 1;
 
@@ -34,31 +36,38 @@ console.log(numRandomPc);
 const sommaNum = numRichiesto + numRandomPc;
 console.log(sommaNum); */
 
-/*
-if (sommaNum % 2 === 0 && sceltaParODisp === "pari" || sommaNum % 2 !== 0 && sceltaParODisp === "dispari") {
-    console.log("Complimenti User, hai vinto!");
-} else if (sceltaParODisp !== "pari" && sceltaParODisp !== "dispari") {
-    console.log("Il gioco non può funzionare, inserisci correttamente pari o dispari!");
-} else {
-    console.log("Ha vinto il computer, mi spiace User, ritenta!");
-} */
 
-const somma = numPariODisp(numRichiesto,numRandomPc);
-console.log(somma);
+const risultato = numPariODisp(numRichiesto,numRandomPc);
+console.log(risultato);
 
 
 function numPariODisp(num1, num2) {
 
     const sommaNum = num1 + num2;
 
-    if (sommaNum % 2 === 0 && sceltaParODisp === "pari" || sommaNum % 2 !== 0 && sceltaParODisp === "dispari") {
-        console.log("Complimenti User, hai vinto!");
-    } else if (sceltaParODisp !== "pari" && sceltaParODisp !== "dispari") {
-        console.log("Il gioco non può funzionare, inserisci correttamente pari o dispari!");
+    if (sommaNum % 2 === 0) {
+        console.log("La somma è pari!");
     } else {
-        console.log("Ha vinto il computer, mi spiace User, ritenta!");
+        console.log("La somma è dispari!");
     }
 
     return sommaNum;
 
 }
+
+
+
+   
+
+
+
+
+
+/* 
+ if (sommaNum % 2 === 0 && sceltaParODisp === "pari" || sommaNum % 2 !== 0 && sceltaParODisp === "dispari") {
+        console.log("Complimenti User, hai vinto!");
+    } else if (sceltaParODisp !== "pari" && sceltaParODisp !== "dispari") {
+        console.log("Il gioco non può funzionare, inserisci correttamente pari o dispari!");
+    } else {
+        console.log("Ha vinto il computer, mi spiace User, ritenta!");
+    } */
