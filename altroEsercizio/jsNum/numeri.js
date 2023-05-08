@@ -37,24 +37,50 @@ const sommaNum = numRichiesto + numRandomPc;
 console.log(sommaNum); */
 
 
-const risultato = numPariODisp(numRichiesto,numRandomPc);
+const risultato = sommaNumeri(numRichiesto,numRandomPc);
 console.log(risultato);
 
 
-function numPariODisp(num1, num2) {
+function sommaNumeri(num1, num2) {
 
     const sommaNum = num1 + num2;
-
-    if (sommaNum % 2 === 0) {
-        console.log("La somma è pari!");
-    } else {
-        console.log("La somma è dispari!");
-    }
 
     return sommaNum;
 
 }
 
+
+
+
+const risultatoPariODisp = numPariODisp(risultato);
+console.log(risultatoPariODisp);
+
+function numPariODisp(num){
+    if (num % 2 === 0) {
+        return "pari";
+    } else {
+        return "dispari";
+    }
+}
+
+
+
+if (risultatoPariODisp === sceltaParODisp) {
+    console.log("hai vinto");
+}
+else {
+    console.log("hai perso!");
+}
+
+
+    /* 
+ if (sommaNum % 2 === 0 && sceltaParODisp === "pari" || sommaNum % 2 !== 0 && sceltaParODisp === "dispari") {
+        console.log("Complimenti User, hai vinto!");
+    } else if (sceltaParODisp !== "pari" && sceltaParODisp !== "dispari") {
+        console.log("Il gioco non può funzionare, inserisci correttamente pari o dispari!");
+    } else {
+        console.log("Ha vinto il computer, mi spiace User, ritenta!");
+    } */
 
 
    
@@ -63,11 +89,3 @@ function numPariODisp(num1, num2) {
 
 
 
-/* 
- if (sommaNum % 2 === 0 && sceltaParODisp === "pari" || sommaNum % 2 !== 0 && sceltaParODisp === "dispari") {
-        console.log("Complimenti User, hai vinto!");
-    } else if (sceltaParODisp !== "pari" && sceltaParODisp !== "dispari") {
-        console.log("Il gioco non può funzionare, inserisci correttamente pari o dispari!");
-    } else {
-        console.log("Ha vinto il computer, mi spiace User, ritenta!");
-    } */
